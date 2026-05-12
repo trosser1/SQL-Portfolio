@@ -72,11 +72,17 @@ SELECT
         ORDER BY custom_week_number
     ) AS cumulative_total_activated_stores,
     
-    -- 3. Count of stores that sold anything THIS week (regardless of when they first activated)
+    -- 3. Count of stores that sold anything THIS week
     COUNT(DISTINCT CASE WHEN total_units_sold > 0 THEN store_id END) AS active_stores_this_week,
     
-    -- 4. Total volume for the week
-    SUM(total_units_sold) AS total_units
+    -- 4. Total volume for THIS week
+    SUM(total_units_sold) AS total_units_this_week,
+
+    -- 5. Cumulative total volume over the whole campaign
+    SUM(SUM(total_units_sold)) OVER (
+        ORDER BY custom_week_number
+    ) AS cumulative_total_units
+    
 FROM cumulative_sales
 GROUP BY 
     custom_week, 
