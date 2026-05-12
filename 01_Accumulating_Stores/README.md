@@ -1,4 +1,4 @@
-# Custom Weekly Store Accumulating Stores
+# Custom Weekly Store Cumulative Stores
 
 **Business Problem:** 
 The business launched a specific promotional campaign starting on January 15th, 2025. Leadership needed to track sales by custom "Campaign Weeks" rather than standard calendar weeks. 
