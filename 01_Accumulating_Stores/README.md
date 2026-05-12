@@ -8,7 +8,7 @@ Specifically, they requested a dashboard feed showing:
 2. A **running total** of all activated stores since the campaign launch.
 3. Total active stores and total units sold for that specific week.
 
-> 🚀 **[Click here to run this query interactively in DB Fiddle!]**(https://www.db-fiddle.com/f/dx5yr4BNqNoQfk6zYRjcNB/0)
+> 🚀 **[Click here to run this query interactively in DB Fiddle!]**(https://www.db-fiddle.com/f/dx5yr4BNqNoQfk6zYRjcNB/1)
 
 **SQL Techniques Highlighted:**
 - **Custom Date Math:** Dynamically calculating custom week intervals from a specific launch date.
